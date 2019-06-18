@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/erdan200/spring-cloud-config-application.git
+          search-paths: yml
+          username: erdan200
+          password: mima013579
+#默认端口不能修改，如果修改，在bootstrap.properties修改
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
